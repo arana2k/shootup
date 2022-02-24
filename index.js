@@ -468,11 +468,11 @@ canvas.addEventListener("click", (e) => {
 canvas.addEventListener("contextmenu", (e) => {
   e.preventDefault();
 
-  if (playerScore <= 0) return;
+  if (playerScore <= 20) return;
   heavyWeaponSound.play();
 
   // Decreasing Player Score for using Heavy Weapon
-  playerScore -= 2;
+  playerScore -= 20;
   // Updating Player Score in Score board in html
   scoreBoard.innerHTML = `Score : ${playerScore}`;
 
@@ -504,10 +504,10 @@ canvas.addEventListener("contextmenu", (e) => {
 
 addEventListener("keypress", (e) => {
   if (e.key === " ") {
-    if (playerScore < 20) return;
+    if (playerScore < 150) return;
 
     // Decreasing Player Score for using Huge Weapon
-    playerScore -= 20;
+    playerScore -= 150;
     // Updating Player Score in Score board in html
     scoreBoard.innerHTML = `Score : ${playerScore}`;
     hugeWeaponSound.play();
